@@ -1,0 +1,62 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Hello Entrepreneurs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-12 14:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.14; wp-6.7.1\n"
+"X-Domain: hello-entrepreneurs"
+
+#. Description of the plugin
+msgid ""
+"A simple plugin that displays random entrepreneurial quotes in the WordPress "
+"admin dashboard."
+msgstr ""
+
+#: hello-entrepreneurs.php:29
+msgid ""
+"Don't be afraid to give up the good to go for the great. - John D. "
+"Rockefeller"
+msgstr ""
+
+#. Name of the plugin
+msgid "Hello Entrepreneurs"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "http://yourwebsite.com/"
+msgstr ""
+
+#: hello-entrepreneurs.php:30
+msgid ""
+"I find that the harder I work, the more luck I seem to have. - Thomas "
+"Jefferson"
+msgstr ""
+
+#: hello-entrepreneurs.php:31
+msgid "Opportunities don't happen. You create them. - Chris Grosser"
+msgstr ""
+
+#: hello-entrepreneurs.php:28
+msgid ""
+"Success usually comes to those who are too busy to be looking for it. - "
+"Henry David Thoreau"
+msgstr ""
+
+#: hello-entrepreneurs.php:27
+msgid "The best way to predict the future is to create it. - Peter Drucker"
+msgstr ""
+
+#. Author of the plugin
+msgid "Your Name"
+msgstr ""
