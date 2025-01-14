@@ -17,14 +17,26 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-// Load text domain for translations
+// Load text domain for translations (if supporting older WordPress versions)
 function hello_entrepreneur_load_textdomain() {
     load_plugin_textdomain('hello-entrepreneur', false, dirname(plugin_basename(__FILE__)) . '/languages');
 }
-add_action('plugins_loaded', 'hello_entrepreneur_load_textdomain');
+add_action('init', 'hello_entrepreneur_load_textdomain');
+
+// Enqueue styles for the admin dashboard
+function hello_entrepreneur_enqueue_styles() {
+    wp_register_style(
+        'hello-entrepreneur-style', 
+        plugins_url('css/hello-entrepreneur.css', __FILE__), 
+        [], 
+        '1.0' // Version number
+    );
+    wp_enqueue_style('hello-entrepreneur-style');
+}
+add_action('admin_enqueue_scripts', 'hello_entrepreneur_enqueue_styles');
 
 // Array of entrepreneurial quotes
-function get_entrepreneurial_quotes() {
+function hello_entrepreneur_get_quotes() {
     $quotes = [
         __("The best way to predict the future is to create it. - Peter Drucker", "hello-entrepreneur"),
         __("Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau", "hello-entrepreneur"),
@@ -37,27 +49,10 @@ function get_entrepreneurial_quotes() {
 }
 
 // Function to display the quote
-function hello_entrepreneur() {
-    $quote = get_entrepreneurial_quotes();
+function hello_entrepreneur_display_quote() {
+    $quote = hello_entrepreneur_get_quotes();
     echo "<p id='hello-entrepreneur-quote'>" . esc_html($quote) . "</p>";
 }
 
 // Hook the function to the admin_notices action
-add_action('admin_notices', 'hello_entrepreneur');
-
-// Add CSS to style the quote like Hello Dolly
-function hello_entrepreneur_css() {
-    echo "
-    <style type='text/css'>
-    #hello-entrepreneur-quote {
-        float: right;
-        padding: 5px 10px;
-        margin: 0;
-        font-size: 12px;
-        line-height: 1.6666;
-    }
-    </style>
-    ";
-}
-add_action('admin_head', 'hello_entrepreneur_css');
-?>
+add_action('admin_notices', 'hello_entrepreneur_display_quote');
