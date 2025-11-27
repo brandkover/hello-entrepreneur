@@ -91,7 +91,7 @@ La persistencia es muy importante. No debes rendirte a menos que te veas obligad
 		// Split by new line
 		$lines = explode( "\n", $lyrics );
 
-		return wptexturize( $lines[ mt_rand( 0, count( $lines ) - 1 ) ] );
+		return wptexturize( $lines[ wp_rand( 0, count( $lines ) - 1 ) ] );
 	}
 }
 
