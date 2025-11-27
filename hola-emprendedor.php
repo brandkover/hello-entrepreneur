@@ -11,7 +11,6 @@
  */
 
 namespace HolaEmprendedor;
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
