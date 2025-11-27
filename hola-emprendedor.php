@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Hola Emprendedor
- * Plugin URI:  https://brandkover.com/hola-emprendedor
+ * Plugin URI:  https://github.com/brandkover/hola-emprendedor/
  * Description: Un plugin simple e inspirador para emprendedores. Muestra una frase motivacional aleatoria en la parte superior de tu panel de administración.
  * Version:     1.1.0
  * Author:      Brandkover
