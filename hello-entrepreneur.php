@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Hola Emprendedor
  * Plugin URI:  https://github.com/brandkover/hola-emprendedor/
- * Description: Un plugin simple e inspirador para emprendedores. Muestra una frase motivacional aleatoria en la parte superior de tu panel de administración.
+ * Description: A simple and inspiring add-on for entrepreneurs. Displays a random motivational quote at the top of your admin panel.
  * Version:     1.1.0
  * Author:      Brandkover
  * Author URI:  https://brandkover.com
@@ -76,18 +76,18 @@ class Core {
 	}
 
 	private function get_random_quote() {
-		$lyrics = "El fracaso es solo la oportunidad de comenzar de nuevo de forma más inteligente. — Henry Ford
-No he fracasado. He encontrado 10.000 formas que no funcionan. — Thomas Edison
-Tu tiempo es limitado, así que no lo desperdicies viviendo la vida de alguien más. — Steve Jobs
-La mejor forma de predecir el futuro es crearlo. — Peter Drucker
-Si no te avergüenza la primera versión de tu producto, lo lanzaste muy tarde. — Reid Hoffman
-El riesgo más grande es no tomar ninguno. — Mark Zuckerberg
-Trabaja duro en silencio, que el éxito sea tu ruido. — Frank Ocean
-La motivación es lo que te pone en marcha, el hábito es lo que hace que sigas. — Jim Ryun
-No busques clientes para tus productos, busca productos para tus clientes. — Seth Godin
-Hazlo con pasión o no lo hagas. — Rosa Nouchette Carey
-La persistencia es muy importante. No debes rendirte a menos que te veas obligado a rendirte. — Elon Musk";
-
+        $lyrics = "Failure is simply the opportunity to begin again, this time more intelligently. — Henry Ford
+I have not failed. I've just found 10,000 ways that won't work. — Thomas Edison
+Your time is limited, so don't waste it living someone else's life. — Steve Jobs
+The best way to predict the future is to create it. — Peter Drucker
+If you are not embarrassed by the first version of your product, you've launched too late. — Reid Hoffman
+The biggest risk is not taking any risk. — Mark Zuckerberg
+Work hard in silence, let success be your noise. — Frank Ocean
+Motivation is what gets you started. Habit is what keeps you going. — Jim Ryun
+Don't find customers for your products, find products for your customers. — Seth Godin
+Do it with passion or not at all. — Rosa Nouchette Carey
+Persistence is very important. You should not give up unless you are forced to give up. — Elon Musk";
+		
 		// Split by new line
 		$lines = explode( "\n", $lyrics );
 
