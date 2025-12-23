@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: Hola Emprendedor
+ * Plugin Name: Hello Entrepreneur
  * Plugin URI:  https://github.com/brandkover/hola-emprendedor/
  * Description: A simple and inspiring add-on for entrepreneurs. Displays a random motivational quote at the top of your admin panel.
  * Version:     1.1.0
  * Author:      Brandkover
  * Author URI:  https://brandkover.com
  * License:     GPL v2 or later
- * Text Domain: hello-entrepeneur
+ * Text Domain: hello-entrepreneur
  */
 
 namespace HolaEmprendedor;
