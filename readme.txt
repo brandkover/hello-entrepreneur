@@ -1,6 +1,6 @@
-=== Hola Emprendedor ===
+=== Hello Entrepreneur ===
 Contributors: Brandkover, Uber Chuquimia
-Tags: motivación, emprendimiento, admin, frases, hello dolly
+Tags: motivation, entrepreneurship, admin, quotes, hello dolly
 Requires at least: 5.8
 Tested up to: 6.8
 Stable tag: 1.1.0
@@ -8,41 +8,42 @@ Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Muestra frases inspiradoras de grandes emprendedores en tu panel de administración. Una versión moderna y segura de Hello Dolly.
+Displays inspiring quotes from great entrepreneurs in your admin dashboard. A modern and secure version of Hello Dolly.
 
 == Description ==
 
-Hola Emprendedor es un tributo al clásico plugin "Hello Dolly", pero reimaginado para fundadores, creadores y dueños de negocios.
+Hello Entrepreneur is a tribute to the classic "Hello Dolly" plugin, but reimagined for founders, creators, and business owners.
 
-En lugar de la letra de una canción, este plugin muestra aleatoriamente una frase motivacional de referentes como Steve Jobs, Henry Ford, Elon Musk o Seth Godin en la parte superior de tu escritorio de WordPress.
+Instead of song lyrics, this plugin randomly displays a motivational quote from references such as Steve Jobs, Henry Ford, Elon Musk, or Seth Godin at the top of your WordPress dashboard.
 
-**Características:**
+**Features:**
 
-*   **Cero Configuración:** Activar y listo.
-*   **Código Moderno:** Desarrollado bajo estándares actuales (Namespaces, Singleton, Escaping).
-*   **Responsive:** A diferencia de otros clones, este plugin se adapta perfectamente a dispositivos móviles, centrando el texto para no interferir con la interfaz.
-*   **Ligero:** No carga scripts innecesarios ni afecta la velocidad de tu sitio.
+*   **Zero Configuration:** Activate and go.
+*   **Modern Code:** Developed following current standards (Namespaces, Singleton, Escaping).
+*   **Responsive:** Unlike other clones, this plugin adapts perfectly to mobile devices, centering the text so it doesn’t interfere with the interface.
+*   **Lightweight:** Does not load unnecessary scripts or affect your site’s speed.
 
 == Installation ==
 
-1. Sube la carpeta `hola-emprendedor` al directorio `/wp-content/plugins/` de tu servidor.
-2. Activa el plugin desde el menú 'Plugins' en WordPress.
-3. Verás una frase inspiradora en la parte superior derecha de tu panel de administración.
+1. Upload the `hello-entrepreneur` folder to the `/wp-content/plugins/` directory on your server.
+2. Activate the plugin from the 'Plugins' menu in WordPress.
+3. You will see an inspiring quote in the top right of your admin dashboard.
 
 == Frequently Asked Questions ==
 
-= ¿Puedo añadir mis propias frases? =
-Sí, puedes editar fácilmente el array de texto dentro de la clase principal en el archivo PHP.
+= Can I add my own quotes? =
+Yes, you can easily edit the text array inside the main class in the PHP file.
 
-= ¿Afecta esto al frontend de mi web? =
-No. El código solo se ejecuta en el área de administración (`is_admin()`), por lo que no tiene impacto en lo que ven tus visitantes.
+= Does this affect my website frontend? =
+No. The code only runs in the admin area (`is_admin()`), so it has no impact on what your visitors see.
 
 == Screenshots ==
 
-1. La frase motivacional apareciendo en el escritorio (versión escritorio).
-2. Vista adaptada en dispositivos móviles.
+1. The motivational quote appearing on the dashboard (desktop version).
+2. Responsive view on mobile devices.
 
 == Changelog ==
 
 = 1.0.0 =
-* Lanzamiento inicial.
+* Initial release.
+
