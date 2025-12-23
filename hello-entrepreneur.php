@@ -7,7 +7,7 @@
  * Author:      Brandkover
  * Author URI:  https://brandkover.com
  * License:     GPL v2 or later
- * Text Domain: hola-emprendedor
+ * Text Domain: hello-entrepeneur
  */
 
 namespace HolaEmprendedor;
