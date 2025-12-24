@@ -1,17 +1,17 @@
 <?php
 /**
- * Plugin Name: Hello Entrepreneur
+ * Plugin Name: Hola Emprendedor
  * Plugin URI:  https://github.com/brandkover/hola-emprendedor/
  * Description: A simple and inspiring add-on for entrepreneurs. Displays a random motivational quote at the top of your admin panel.
  * Version:     1.1.0
  * Author:      Brandkover
  * Author URI:  https://brandkover.com
  * License:     GPL v2 or later
- * Text Domain: hello-entrepreneur
+ * Text Domain: hola-emprendedor
  */
 
 namespace HolaEmprendedor;
-// 
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -29,13 +29,17 @@ class Core {
 
 	private function __construct() {
 		add_action( 'admin_notices', [ $this, 'print_quote' ] );
-		add_action( 'admin_head', [ $this, 'inject_styles' ] );
+		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_styles' ] );
 	}
 
 	public function print_quote() {
+		if ( ! current_user_can( 'read' ) ) {
+			return;
+		}
+
 		$quote = $this->get_random_quote();
 		$lang  = get_locale();
-		$dir   = ( in_array( $lang, [ 'ar', 'he', 'fa' ], true ) ) ? 'rtl' : 'ltr';
+		$dir   = in_array( $lang, [ 'ar', 'he', 'fa' ], true ) ? 'rtl' : 'ltr';
 
 		printf(
 			'<div id="hola-emprendedor" dir="%s">%s</div>',
@@ -44,12 +48,9 @@ class Core {
 		);
 	}
 
-	public function inject_styles() {
-		if ( ! current_user_can( 'read' ) ) {
-			return;
-		}
-		?>
-		<style>
+	public function enqueue_styles() {
+
+		$css = '
 			#hola-emprendedor {
 				float: right;
 				padding: 5px 15px 0 0;
@@ -59,24 +60,28 @@ class Core {
 				color: #72777c;
 				line-height: 1.6;
 			}
+
 			@media screen and (max-width: 782px) {
 				#hola-emprendedor {
-					float: none !important;
+					float: none;
 					display: block;
 					width: 100%;
 					text-align: center;
 					padding: 12px 0;
 					margin-bottom: 5px;
-					height: auto;
 					clear: both;
 				}
 			}
-		</style>
-		<?php
+		';
+
+		wp_register_style( 'hola-emprendedor-style', false, [], '1.1.0' );
+		wp_enqueue_style( 'hola-emprendedor-style' );
+		wp_add_inline_style( 'hola-emprendedor-style', $css );
 	}
 
 	private function get_random_quote() {
-        $lyrics = "Failure is simply the opportunity to begin again, this time more intelligently. — Henry Ford
+		$quotes = "
+Failure is simply the opportunity to begin again, this time more intelligently. — Henry Ford
 I have not failed. I've just found 10,000 ways that won't work. — Thomas Edison
 Your time is limited, so don't waste it living someone else's life. — Steve Jobs
 The best way to predict the future is to create it. — Peter Drucker
@@ -86,14 +91,13 @@ Work hard in silence, let success be your noise. — Frank Ocean
 Motivation is what gets you started. Habit is what keeps you going. — Jim Ryun
 Don't find customers for your products, find products for your customers. — Seth Godin
 Do it with passion or not at all. — Rosa Nouchette Carey
-Persistence is very important. You should not give up unless you are forced to give up. — Elon Musk";
-		
-		// Split by new line
-		$lines = explode( "\n", $lyrics );
+Persistence is very important. You should not give up unless you are forced to give up. — Elon Musk
+";
+
+		$lines = array_filter( array_map( 'trim', explode( "\n", $quotes ) ) );
 
 		return wptexturize( $lines[ wp_rand( 0, count( $lines ) - 1 ) ] );
 	}
 }
 
-// Init
 Core::get_instance();
