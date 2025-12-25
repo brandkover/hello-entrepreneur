@@ -1,0 +1,21 @@
+name: Deploy to WordPress.org
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to WordPress.org
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SVN_USERNAME: ${{ brandkover }}
+          SVN_PASSWORD: ${{ svn_7UV5S3iZwFMyh0kcPToh9Sc2ECDcOx6Ecdeab8e7 }}
+          SLUG: hola-emprendedor
