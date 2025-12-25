@@ -1,4 +1,4 @@
-=== Hello Entrepreneur ===
+=== Hola Emprendedor ===
 Contributors: Brandkover, Uber Chuquimia
 Tags: motivation, entrepreneurship, admin, quotes, hello dolly
 Requires at least: 5.8
@@ -46,4 +46,3 @@ No. The code only runs in the admin area (`is_admin()`), so it has no impact on 
 
 = 1.0.0 =
 * Initial release.
-
