@@ -46,3 +46,5 @@ No. The code only runs in the admin area (`is_admin()`), so it has no impact on 
 
 = 1.0.0 =
 * Initial release.
+= 1.1.1 =
+* Fix: Correct contributors usernames.
