@@ -1,5 +1,5 @@
 === Hola Emprendedor ===
-Contributors: Brandkover, Uber Chuquimia
+Contributors: brandkover, ubergabriel
 Tags: motivation, entrepreneurship, admin, quotes, hello dolly
 Requires at least: 5.8
 Tested up to: 6.9
