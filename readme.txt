@@ -2,8 +2,8 @@
 Contributors: brandkover, ubergabriel
 Tags: motivation, entrepreneurship, admin, quotes, hello dolly
 Requires at least: 5.8
-Tested up to: 6.9
-Stable tag: 1.1.1
+Tested up to: 7.0
+Stable tag: 1.2.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -32,10 +32,10 @@ Instead of song lyrics, this plugin randomly displays a motivational quote from 
 == Frequently Asked Questions ==
 
 = Can I add my own quotes? =
-Yes, you can easily edit the text array inside the main class in the PHP file.
+Yes. Developers can use the `hola_emprendedor_quotes` filter to replace or extend the quote list without editing the plugin file.
 
 = Does this affect my website frontend? =
-No. The code only runs in the admin area (`is_admin()`), so it has no impact on what your visitors see.
+No. The plugin hooks only into admin screens, so it has no impact on what your visitors see.
 
 == Screenshots ==
 
@@ -44,7 +44,13 @@ No. The code only runs in the admin area (`is_admin()`), so it has no impact on 
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial release.
+= 1.2.0 =
+* Update: Confirm compatibility with WordPress 7.0.
+* Improvement: Add the `hola_emprendedor_quotes` filter so developers can customize quotes safely.
+* Improvement: Use the plugin version constant for registered assets and WordPress RTL detection for text direction.
+
 = 1.1.1 =
 * Fix: Correct contributors usernames.
+
+= 1.0.0 =
+* Initial release.
